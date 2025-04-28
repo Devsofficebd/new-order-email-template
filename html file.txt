@@ -1,1 +1,93 @@
+<head>
+<style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .email-container {
+            width: 85%;
+            max-width: 600px;
+            margin: 30px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            color: #007bff;
+            font-size: 28px;
+            font-weight: bold;
+            margin: 0;
+        }
+        .details {
+            background-color: #e9f7e1;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .details p {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+        .details p strong {
+            color: #28a745;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .verify-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #28a745;
+            color: #fff !important;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: background-color 0.3s ease;
+        }
+        .verify-button:hover {
+            background-color: #218838;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 14px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="header">
+            <h1>You've Received a New Order!</h1>
+        </div>
 
+        <div class="details">
+            <p><strong>Customer Name:</strong> %customer_name%</p>
+            <p><strong>Email:</strong> %customer_email%</p>
+        </div>
+
+        <div class="details">
+            <p><strong>Product Details:</strong></p>
+            <p>%product_details%</p>
+        </div>
+
+        <div class="button-container">
+            <p>To verify the order, click the button below:</p>
+            <a class="verify-button" href="https://tamayyuz-hub.com/wp-admin/post.php?post=%order_id%&action=edit">Verify Now</a>
+        </div>
+
+        <div class="footer">
+            <p>Thank you for your quick response!</p>
+        </div>
+    </div>
+
+</body>
